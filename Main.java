@@ -26,7 +26,7 @@ public class Main
         
        System.out.println("Guess a number between 1 and 10: ");
        
-       while (true){
+       while (guess != number){
             guess = input.nextInt();
             count++;
             if (guess > number) {
@@ -37,7 +37,6 @@ public class Main
              }
              else {
                 System.out.println("Congrats! " + guess + " is the number! You guessed " + count + " times.");
-                break;
             }
 
         }

@@ -5,29 +5,42 @@
  * @author (your name)
  * @version (a version number or a date)
  */
+import java.util.Random;
+import java.util.Scanner;
+
 public class Main
 {
     // instance variables - replace the example below with your own
-    private int x;
+        Random rand = new Random();
+        Scanner input = new Scanner(System.in);
 
-    /**
-     * Constructor for objects of class Main
-     */
+        int number = rand.nextInt(10) + 1;
+        int count = 0;
+        int guess = 0;
+        
+
+
+    
     public Main()
     {
-        // initialise instance variables
-        x = 0;
+        
+       System.out.println("Guess a number between 1 and 10: ");
+       
+       while (true){
+            guess = input.nextInt();
+            count++;
+            if (guess > number) {
+                System.out.println("Guess lower:");
+            }
+             else if (guess < number) {
+                System.out.println("Guess higher:");
+             }
+             else {
+                System.out.println("Congrats! " + guess + " is the number! You guessed " + count + " times.");
+                break;
+            }
+
+        }
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
 }

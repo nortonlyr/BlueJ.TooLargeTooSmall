@@ -8,7 +8,7 @@
 public class TooLargeTooSmall
 {
     // instance variables - replace the example below with your own
-    private integer chosenNum;
+    private Integer chosenNum;
 
     /**
      * Constructor for objects of class TooLargeTooSmall
